@@ -1,0 +1,752 @@
+/*css reset*/			
+			html, body, div, span, applet, object, iframe,
+			h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+			a, abbr, acronym, address, big, cite, code,
+			del, dfn, em, img, ins, kbd, q, s, samp,
+			small, strike, strong, sub, sup, tt, var,
+			b, u, i, center,
+			dl, dt, dd, ol, ul, li,
+			fieldset, form, label, legend,
+			table, caption, tbody, tfoot, thead, tr, th, td,
+			article, aside, canvas, details, embed, 
+			figure, figcaption, footer, header, hgroup, 
+			menu, nav, output, ruby, section, summary,
+			time, mark, audio, video {
+				margin: 0;
+				padding: 0;
+				border: 0;
+				font-size: 100%;
+				font: inherit;
+				vertical-align: baseline;
+			}
+			/* HTML5 display-role reset for older browsers */
+			article, aside, details, figcaption, figure, 
+			footer, header, hgroup, menu, nav, section {
+				display: block;
+			}
+			body {
+				line-height: 1;
+			}
+			ol, ul {
+				list-style: none;
+			}
+			blockquote, q {
+				quotes: none;
+			}
+			blockquote:before, blockquote:after,
+			q:before, q:after {
+				content: '';
+				content: none;
+			}
+			table {
+				border-collapse: collapse;
+				border-spacing: 0;
+			}
+/*main*/
+			html, body {
+				scroll-behavior: smooth;
+			}	
+			.menu{
+				position: relative;
+				z-index: 30;
+			}
+			.line{
+				text-align: center;
+				font-size: 0;
+			}
+			li{
+				display: inline-block;
+				background:chocolate;
+				font-size: 40px;
+			}
+			li+li{
+				border-left: 2px solid brown;
+			}
+			.line li a{
+				text-decoration: none;
+				color:antiquewhite;
+				text-transform: uppercase;
+				padding: 20px 90px 25px 90px;
+				display: block;
+				position: relative;
+			}
+			.first_menu a:before{
+				content: "";
+				display: block;
+				width: 84px;
+				height: 84px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background: url("../icons/84/css_sprites.png") 0 -84px;
+			}
+			.second_menu a:before{
+				content: "";
+				display: block;
+				width: 84px;
+				height: 84px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background: url("../icons/84/css_sprites.png") -84px -84px;
+			}
+			.blocks .ablock:after{
+				content: "";
+				display: block;
+				width: 84px;
+				height: 84px;
+				position: absolute;
+				top: 0;
+				right: 0;
+				background: url("../icons/84/css_sprites.png") 0px 0px;
+			}
+			.blocks:hover .ablock:after{
+				background: url("../icons/84/css_sprites.png") -84px -168px;
+			}
+			.blocks:hover .ablock{
+				background-color:burlywood;
+			}
+			.blocks{
+				position: relative;
+			}
+			.bl{
+				position: absolute;
+				top: 100%;
+				left: 0;
+				right: 0;
+				opacity: 0;
+				overflow: hidden;
+				height: 0px;
+				margin-top: -300px;
+			}
+			.blocks:hover .bl{
+				position: absolute;
+				top: 100%;
+				left: 0;
+				right: 0;
+				opacity: 1;
+				overflow:visible;
+				height: 0px;
+				margin-top: 0px;
+				transition: all .3s ease;
+			}
+
+			.fl{
+				position: relative;
+			}
+			.a_fl:before{
+				content: "";
+				display: block;
+				width: 84px;
+				height: 84px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background: url("../icons/84/css_sprites.png") -168px -84px;
+			}
+			.fl:hover .a_fl:before{
+				background: url("../icons/84/css_sprites.png") 0px -168px;
+			}
+			.in_fl{
+				position: absolute;
+				right: 100%;
+				top: 0;
+				overflow: hidden;
+				opacity: 0;
+				margin-right: -1000px;
+			}
+			.fl:hover .in_fl{
+				overflow: visible;
+				opacity: 1;
+				margin-right: 0px;
+				transition: all .3s cubic-bezier(0.48,-0.39, 0.79, 1.61) ;
+			}
+			.foot_line{
+				font-size: 0;
+				text-align: center;
+			}
+			.foot_line1{
+				display: inline-block
+			}
+			.foot_line1 a{
+				font-size: 40px;
+				width: 84px;
+				height: 84px;
+				display: inline-block;
+				background: url("../icons/84/css_sprites.png") -84px 0px;
+			}
+			.foot_line2 a{
+				font-size: 40px;
+				width: 84px;
+				height: 84px;
+				display: inline-block;
+				background: url("../icons/84/css_sprites.png") -168px 0px;
+			}
+			.foot_line3 a{
+				font-size: 40px;
+				width: 84px;
+				height: 84px;
+				display: inline-block;
+				background: url("../icons/84/css_sprites.png") -168px -168px;
+			}
+
+
+			.bl li{
+			display: block;
+			border-top: 2px solid brown;
+	
+			}
+
+			h1{
+				text-align: center;
+				text-decoration: underline;
+				font-size: 45px;
+				line-height: 1.5;
+			}
+			h2{
+				color: saddlebrown;
+				text-align: center;
+				font-size: 35px;
+				line-height: 1.5;
+			}
+			h3{
+				color: saddlebrown;
+				text-align: center;
+				font-size: 30px;
+				line-height: 1.5;
+			}
+			p{
+				font-size: 25px;
+				line-height: 1.5;
+			}
+			.main{
+				color: chocolate;
+				background: lemonchiffon;
+				font-size: 20px;
+				width: 1280px;
+				margin: 0 auto;
+				font-family: Georgia;
+				padding: 20px 30px;
+				border: 10px solid goldenrod;		
+			}
+			.list{
+				background: lemonchiffon;
+				width: 1200px;
+				height: 300px;
+				overflow-x: auto;
+				margin: 0 auto;
+				padding-right: 10px;
+				box-sizing: border-box;
+			}
+			.theatres{
+				text-align: justify;
+			}
+			.img{
+				text-align: center;
+			}
+/* t_cell */
+			/* div{
+				outline: 2px solid lightsalmon;
+			} */
+			.wrapper_t{
+				width: 1200px;
+				margin: 0 auto;
+				background: lightblue;
+				padding: 50px 0;
+			}
+			.first{
+				background: red;
+			}
+			.first_1{
+				width: 400px;
+				display: table-cell;
+
+			}
+			.second{
+				background: orangered;
+			}
+
+			.third{
+				background: yellow;
+			}
+			.fourth{
+				background: green;
+			}
+			.second_left{
+				width: 800px;
+				display: table-cell;
+			}
+			.second_right{
+				width: 400px;
+				display: table-cell;
+			}
+			.third_left{
+				width: 400px;
+				display: table-cell;
+			}
+			.third_right{
+				width: 800px;
+				display: table-cell;
+			}
+			.third_right_bottom1{
+				width: 400px;
+				display: table-cell;
+			}
+			.third_right_bottom2{
+				width: 400px;
+				display: table-cell;
+			}
+			.fourth_left{
+				width: 800px;
+				display: table-cell;
+			}
+			.fourth_left_bottom_left{
+				width: 400px;
+				display: table-cell;
+			}
+			.fourth_left_bottom_right{
+				width: 400px;
+				display: table-cell;
+			}
+			.fourth_left_bottom_left_top{
+				display: block;
+			}
+			.fourth_left_bottom_left_bottom{
+				display: block;
+			}
+			.fourth_left_bottom_left_bottom1{
+				width: 200px;
+				display: table-cell;
+			}
+			.fourth_left_bottom_left_bottom2{
+				width: 200px;
+				display: table-cell;
+			}
+			.fourth_right{
+				width: 400px;
+				display: table-cell;
+			}
+/* in_bl */
+			.wrapper_in{
+				width: 1200px;
+				margin: 0 auto;
+				background: lightblue;
+				padding: 50px 0;
+			}
+			.first_in{
+				background: red;
+				font-size: 0px;
+			}
+			.first_1_in{
+				width: 400px;
+				font-size: 20px;
+				display: inline-block;
+
+			}
+			.second_in{
+				background: orangered;
+				font-size: 0px;
+			}
+
+			.third_in{
+				background: yellow;
+				font-size: 0px;
+			}
+			.fourth_in{
+				background: green;
+				font-size: 0px;
+			}
+			.second_left_in{
+				width: 800px;
+				font-size: 20px;
+				display: inline-block;
+			}
+			.second_right_in{
+				width: 400px;
+				font-size: 20px;
+				display: inline-block;
+			}
+			.third_left_in{
+				width: 400px;
+				font-size: 20px;
+				display: inline-block;
+			}
+			.third_right_in{
+				width: 800px;
+				font-size: 0px;
+				display: inline-block;
+			}
+			.third_right_top_in{
+				font-size: 20px;
+			}
+			.third_right_bottom1_in{
+				width: 400px;
+				font-size: 15px;
+				display: inline-block;
+			}
+			.third_right_bottom2_in{
+				width: 400px;
+				font-size: 15px;
+				display: inline-block;
+			}
+			.fourth_left_in{
+				width: 800px;
+				font-size: 20px;
+				display: inline-block;
+			}
+			.fourth_left_bottom_in{
+				font-size: 0px;
+			}
+			.fourth_left_bottom_left_in{
+				width: 400px;
+				display: inline-block;
+			}
+			.fourth_left_bottom_right_in{
+				width: 400px;
+				font-size: 20px;
+				display: inline-block;
+			}
+			.fourth_left_bottom_left_top_in{
+				width: 400px;
+				font-size: 20px;
+			}
+			.fourth_left_bottom_left_bottom_in{
+				width: 400px;
+				font-size: 0px;
+			}
+			.fourth_left_bottom_left_bottom1_in{
+				width: 200px;
+				font-size: 20px;
+				display: inline-block;
+			}
+			.fourth_left_bottom_left_bottom2_in{
+				width: 200px;
+				font-size: 20px;
+				display: inline-block;
+			}
+			.fourth_right_in{
+				width: 400px;
+				font-size: 20px;
+				display: inline-block;
+			}
+/* float */
+			.one .wrapper{
+				width: 1200px;
+				margin: 0 auto;
+				background: lightblue;
+				padding: 50px 0;
+			}
+			.one .first{
+				background: red;
+			}
+			.one .first_1{
+				width: 400px;
+				float: left;
+			}
+			.one .first_2{
+				width: 400px;
+				float: left;
+			}
+			.one .first_3{
+				width: 400px;
+				float: left;
+			}
+			.one .clr{
+				clear: left;
+			}
+			.one .second{
+				background: orangered;
+			}
+			.one third{
+				background: yellow;
+			}
+			.one .fourth{
+				background: green;
+			}
+			.one .second_left{
+				width: 800px;
+				float: left;
+			}
+			.one .second_right{
+				width: 400px;
+				float: left;
+			}
+			.one .third_left{
+				width: 400px;
+				float: left;
+			}
+			.one .third_right{
+				width: 800px;
+				float: left;
+			}
+			.one .third_right_bottom1{
+				float: left;
+				width: 400px;
+			}
+			.one .third_right_bottom2{
+				float: left;
+				width: 400px;
+			}
+			.one .fourth_left{
+				width: 800px;
+				float: left;
+			}
+			.one .fourth_left_bottom{
+			}
+			.one .fourth_left_bottom_left{
+				width: 400px;
+				float: left;
+			}
+			.one .fourth_left_bottom_right{
+				width: 400px;
+				float: left;
+			}
+			.one .fourth_left_bottom_left_bottom{
+			}
+			.one .fourth_left_bottom_left_bottom1{
+				width: 200px;
+				float: left;
+			}
+			.one .fourth_left_bottom_left_bottom2{
+				width: 200px;
+				float: left;
+			}
+			.one .fourth_right{
+				width: 400px;
+				float: left;
+			}
+/* float after */
+			.two .wrapper{
+				width: 1200px;
+				margin: 0 auto;
+				background: lightblue;
+				padding: 50px 0;
+			}
+			.two .float:after{
+				content: "";
+				clear: both;
+				display: block;
+			}
+			.two .first{
+				background: red;
+			}
+			.two .first_1{
+				width: 400px;
+				float: left;
+			}
+			.two .first_2{
+				width: 400px;
+				float: left;
+			}
+			.two .first_3{
+				width: 400px;
+				float: left;
+			}
+			.two .clr{
+				clear: left;
+			}
+			.two .second{
+				background: orangered;
+			}
+			.two .third{
+				background: yellow;
+			}
+			.two .fourth{
+				background: green;
+			}
+			.two .second_left{
+				width: 800px;
+				float: left;
+			}
+			.two .second_right{
+				width: 400px;
+				float: left;
+			}
+			.two .third_left{
+				width: 400px;
+				float: left;
+			}
+			.two .third_right{
+				width: 800px;
+				float: left;
+			}
+			.two .third_right_bottom1{
+				float: left;
+				width: 400px;
+			}
+			.two .third_right_bottom2{
+				float: left;
+				width: 400px;
+			}
+			.two .fourth_left{
+				width: 800px;
+				float: left;
+			}
+			.two .fourth_left_bottom_left{
+				width: 400px;
+				float: left;
+			}
+			.two .fourth_left_bottom_right{
+				width: 400px;
+				float: left;
+			}
+			.two .fourth_left_bottom_left_bottom1{
+				width: 200px;
+				float: left;
+			}
+			.two .fourth_left_bottom_left_bottom2{
+				width: 200px;
+				float: left;
+			}
+			.two .fourth_right{
+				width: 400px;
+				float: left;
+			}
+/* flex */
+			.flexx .wrapper{
+				width: 1200px;
+				margin: 0 auto;
+				background: lightblue;
+				padding: 50px 0;
+			}
+			.flexx .first{
+				background: red;
+				display: flex;
+			}
+			.flexx .first_1{
+				flex: 0 0 400px;
+			}
+			.flexx .second{
+				background: orangered;
+				display: flex;
+			}
+			.flexx .third{
+				background: yellow;
+				display: flex;
+			}
+			.flexx .fourth{
+				background: green;
+				display: flex;
+			}
+			.flexx .second_left{
+				flex: 0 0 800px;
+			}
+			.flexx .second_right{
+				flex: 0 0 400px;
+			}
+			.flexx .third_left{
+				flex: 0 0 400px;
+			}
+			.flexx .third_right{
+				flex: 0 0 800px;
+			}
+			.flexx .third_right_bottom{
+				display: flex;
+			}
+			.flexx .fourth_left{
+				flex: 0 0 800px;
+			}
+			.flexx .fourth_left_bottom{
+				display: flex;
+			}
+			.flexx .fourth_left_bottom_left{
+				flex: 0 0 400px;
+			}
+			.flexx .fourth_left_bottom_right{
+				flex: 0 0 400px;
+			}
+			.flexx .fourth_left_bottom_left_bottom{
+				display: flex;
+			}
+			.flexx .fourth_left_bottom_left_bottom1{
+				flex: 0 0 200px;
+			}
+			.flexx .fourth_left_bottom_left_bottom2{
+				flex: 0 0 200px;
+			}
+			.flexx .fourth_right{
+				flex: 0 0 400px;
+			}
+/* Picture */
+			.pic h1{
+				font-size: 30px;
+				text-align: center;
+				text-decoration: underline;
+				color:blue;
+				padding: 10px;
+			}
+			.pic .wrapper{
+				width: 1280px;
+				margin: 0 auto;
+				background: lightgoldenrodyellow;
+				padding: 50px 0;
+			}
+			.pic .rest{
+				position: relative;
+				text-align: center;
+			}
+			.pic .float:after{
+				content: "";
+				clear: both;
+				display: block;
+			}
+			.pic .rest_1{
+				float: left;
+				padding: 0px;
+				position: relative;
+				display: inline-block;
+			}
+			.pic .text{
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(255, 255, 255, 0.4);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: seashell;
+				font-size: 30px;
+				padding: 0px;
+			}
+			.pic .rest_2{
+				float: left;
+				padding: 0px;
+				position: relative;
+				display: inline-block;
+			}
+			.pic .rest_3{
+				float: left;
+				padding: 0px;
+				position: relative;
+				display: inline-block;
+			}
+			.pic .rest_4{
+				float: left;
+				padding: 0px;
+				position: relative;
+				display: inline-block;
+			}
+			.pic .rest_5{
+				float: left;
+				padding: 0px;
+				position: relative;
+				display: inline-block;
+			}
+			.pic .rest_6{
+				float: left;
+				padding: 0px;
+				position: relative;
+				display: inline-block;
+			}
+			.pic .rest_7{
+				float: left;
+				padding: 0;
+				position: relative;
+				display: inline-block;
+			}
+			.pic div{
+				outline: 0mm;
+			}
+			 
